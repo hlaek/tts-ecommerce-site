@@ -1,0 +1,96 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+
+body {
+	background-color: #EADEDA;
+}
+
+.navbar {
+	background-color: #D90368;
+}
+
+.webheading {
+	color: #FFD400;
+	font-family: 'Molle', cursive;
+	font-size: 90px;
+	text-shadow: 2px 2px 1px #D90368, 4px 4px 1px #820263, 6px 6px 1px #2E294E; 
+	margin-top: -10px;
+	margin-bottom: 40px;
+}
+
+
+.well button {
+	background-color: #2E294E;
+	padding: 10px; 
+	text-decoration: none;
+	color: #FFD400;
+	border-radius: 30px;
+	font-family: arial;
+}
+
+.well button:hover {
+	color: #FFD400;
+	background-color: #D90368;
+	text-decoration: none;
+}
+
+.well glyphicon:hover {
+	text-decoration: none;
+	background-color: clear;
+}
+
+.add_to_cart_btn {
+	background-color: #2E294E;
+	padding: 10px; 
+	text-decoration: none;
+	color: #FFD400;
+	border-radius: 30px;
+	font-family: arial;	
+}
+
+.add_to_cart_btn:hover {
+	color: #FFD400;
+	background-color: #D90368;
+	text-decoration: none;
+}
+
+
+.well {
+	border: 2px solid #820263;
+	text-align: center; 
+}
+
+.modal {
+	text-align: center; 
+}
+
+.view-order-btns .btn {
+	background-color: #2E294E;
+	padding: 10px; 
+	text-decoration: none;
+	color: #FFD400;
+	border-radius: 30px;
+	font-family: arial;	
+}
+
+.view-order-btns .btn:hover {
+	color: #FFD400;
+	background-color: #D90368;
+	text-decoration: none;
+}

@@ -1,0 +1,36 @@
+<h2>My Cart</h2>
+
+<div>
+ <table class="table">
+	<thead>
+		<tr>
+			<th>Product</th>
+			<th>Price</th>
+			<th>Quantity</th>
+			<th>Total</th>
+			<th>Remove from Cart</th>
+		</tr>
+	</thead>
+	<tbody>
+
+	<% @line_items.each do |line_item| %>
+	<tr>
+	<td><%= line_item.product.name%></td>
+	<td><%= number_to_currency line_item.product.price %></td>
+	<td> Quantity: <%=line_item.quantity %></td>
+	<td> Subtotal: <%=number_to_currency line_item.line_item_total %></td>
+	<td><%= link_to "Remove From Cart", remove_from_cart_path(line_item_id: line_item.id), method: :post, class: "btn" %></td>
+	</tr>
+	<% end %>
+	</tbody>
+ </table>
+</div>
+
+
+<div class="view-order-btns">
+	<% if @line_items.length >= 1 %>
+	<%= link_to "Checkout?", checkout_path, class: "btn" %>
+	<% end %>
+
+	<%= link_to "Continue Shopping", root_path, class: "btn" %>
+</div>
